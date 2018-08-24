@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG') == '1'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -123,6 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.getenv('STATIC_ROOT')
 
 SOCIAL_AUTH_TIMECROWD_KEY = os.getenv('SOCIAL_AUTH_TIMECROWD_KEY')
 SOCIAL_AUTH_TIMECROWD_SECRET = os.getenv('SOCIAL_AUTH_TIMECROWD_SECRET')
